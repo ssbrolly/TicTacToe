@@ -1,0 +1,27 @@
+.app{
+    position: fixed;
+    left: 50%;
+    top: 30px;
+    margin-left: -50px;
+  }
+
+  .box{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+    border: 1px solid black;
+  }
+
+  .green{
+    background-color: green;
+  }
+
+  .red{
+    background-color: red;
+  }
+
+  .blue{
+    background-color: blue;
+  };
