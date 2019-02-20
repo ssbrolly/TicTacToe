@@ -16,7 +16,7 @@ function startGame(xpos, ypos) {
             thisBox.classList.remove('blue');
             // thisBox.classList.toggle('green');
             nextPlayer();
-        } else {
+        } else if (activePlayer === 0) {
             thisBox.classList.toggle('blue');
             thisBox.classList.remove('red');
             // thisBox.classList.toggle('green');
