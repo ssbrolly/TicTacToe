@@ -41,7 +41,7 @@
 
 
 let app = document.querySelector('.app');
-let activePlayer = 1;
+let activePlayer = 0;
 
 function startGame(xpos, ypos) {
     let box = document.createElement('div');
@@ -52,18 +52,18 @@ function startGame(xpos, ypos) {
 
     box.addEventListener('click', (e) => {
         let thisBox = e.target;
-        if (activePlayer === 1) {
+        if (activePlayer === 0) {
             thisBox.classList.toggle('red');
             nextPlayer();
-        } else {
+        } else if (activePlayer === 1) {
             thisBox.classList.toggle('blue');
             nextPlayer();
-        };
-    });
+        }
+    })
 };
 
-function nextPlayer() {
-    activePlayer === 1 ? activePlayer = 0 : activePLayer = 1;
+function nexPlayer() {
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 }
 
 for (let i = 0; i < 5; i++) {
