@@ -39,3 +39,21 @@
 //     };
 // };
 
+
+let app = document.querySelector('.app');
+
+function renderBox(xpos, ypos) {
+    let box = document.createElement('div');
+    box.classList = 'box green';
+    box.style.left = xpos + 'px';
+    box.style.top = ypos + 'px';
+    app.appendChild(box);
+}
+
+for (let i = 0; i < 5; i++) {
+    let xpos = i * 20;
+    for (let y =0; y < 5; y++) {
+        let ypos = y * 20;
+        renderBox(xpos, ypos);
+    };
+};
