@@ -40,18 +40,23 @@
 // };
 
 
-let app = document.querySelector('.app');
+
+
+
 
 
 function startGame(xpos, ypos) {
+    let app = document.querySelector('.app');
     let box = document.createElement('div');
     box.classList = 'box green';
-    box.style.top = ypos + 'px';
     box.style.left = xpos + 'px';
+    box.style.top = ypos + 'px';
     app.appendChild(box);
 
+
     box.addEventListener('click', (e) => {
-        let greenBox = e.targe;
+        let thisBox = e.target;
+        thisBox.classList.toggle('red');
     })
 };
 
@@ -60,5 +65,6 @@ for (let i = 0; i < 5; i++) {
     for (let y = 0; y < 5; y++) {
         let ypos = y * 20;
         startGame(xpos, ypos);
-    };
-};
+    }
+}
+
