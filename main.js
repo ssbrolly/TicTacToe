@@ -65,6 +65,6 @@ for (let i = 0; i < 5; i++) {
     for (let y = 0; y < 5; y++) {
         let ypos = y * 20;
         startGame(xpos, ypos);
-    }
-}
+    };
+};
 
